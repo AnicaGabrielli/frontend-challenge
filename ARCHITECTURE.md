@@ -12,7 +12,7 @@ Queries: `staleTime` 15 s, 1 retry, sem refetch ao focar a janela, `keepPrevious
 
 ## Limitações e desvios do Figma
 - Arte dos NFTs é SVG gerado (os PNGs do Figma não estão disponíveis como assets separados).
-- Seções editoriais (Diário, newsletter, banners), abas "Novos lançamentos/Em alta" e rodapé completo foram omitidas (§3: fora do escopo).
+- Seções editoriais (banners, Diário da Cunhagem, benefícios/newsletter, rodapé) existem como no layout, com arte SVG. "Ler mais", newsletter e links do rodapé são páginas fora do escopo (§3): aparecem desativados/texto simples ou avisam indisponibilidade, sem simular sucesso. "Explorar" nos banners filtra o catálogo. Faltam as abas "Novos lançamentos/Em alta" e o card "NFT em destaque" da barra lateral.
 - Botão "Adicionar" no card (não desenhado) permite montar o carrinho sem a tela de detalhe.
 - Sem autenticação: o carrinho e pedidos são do navegador. Sem Socket.IO, cupom, favoritos, perfil, carteiras.
 - Sem testes de regressão visual, Lighthouse, lint e deploy.

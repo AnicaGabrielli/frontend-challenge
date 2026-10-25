@@ -1,5 +1,6 @@
 import { Link, Outlet } from '@tanstack/react-router';
 import { useCart } from '../purchase/useCart';
+import { SiteFooter } from './home/Editorial';
 
 export function Layout() {
   const { count } = useCart();
@@ -17,9 +18,7 @@ export function Layout() {
         </div>
       </header>
       <Outlet />
-      <footer className="mt-10 border-t border-line py-6 text-center text-xs text-muted">
-        © 2026 Kurio. Propriedade digital para todos.
-      </footer>
+      <SiteFooter />
     </>
   );
 }

@@ -3,6 +3,7 @@ import { Skeleton } from '../components/ui/skeleton';
 import { Button } from '../components/ui/button';
 import { NftArt } from '../components/NftArt';
 import { toApiError } from '../lib/api';
+import { Benefits, Diario, PromoBanners } from '../components/home/Editorial';
 import { Filters } from './Filters';
 import { NftCard } from './NftCard';
 import { Pagination } from './Pagination';
@@ -103,6 +104,10 @@ export function CatalogPage() {
           )}
         </div>
       </section>
+
+      <PromoBanners />
+      <Diario />
+      <Benefits />
     </>
   );
 }

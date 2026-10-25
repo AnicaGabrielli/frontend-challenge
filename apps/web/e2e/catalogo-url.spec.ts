@@ -57,3 +57,15 @@ test.describe('Catálogo: estado de busca na URL', () => {
     await expect(page.getByTestId('nft-card')).toHaveCount(9);
   });
 });
+
+test.describe('Seções editoriais do layout', () => {
+  test('Diário da Cunhagem e rodapé aparecem; newsletter não simula sucesso', async ({ page }) => {
+    await openWith(page, '/');
+    await expect(page.getByRole('heading', { name: 'Diário da Cunhagem' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Como funciona a propriedade de NFTs' })).toBeVisible();
+    await page.getByLabel('Seu e-mail').fill('ana@example.com');
+    await page.getByRole('button', { name: 'Enviar' }).click();
+    await expect(page.getByRole('status')).toContainText('não está disponível');
+    await expect(page.getByRole('heading', { name: 'Central de ajuda' })).toBeVisible();
+  });
+});
